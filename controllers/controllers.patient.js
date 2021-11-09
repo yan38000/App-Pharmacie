@@ -24,7 +24,7 @@ module.exports.addPatient = async (req, res)=>{
 module.exports.infoPatient = async (req,res)=>{
     patientModel.findById(req.params.id , (err , docs)=>{
         if (!err) res.send(docs);
-        else return res.status(404).send('ID unknown:'+ req.params.id);
+        else return res.status(400).send('ID unknown:'+ req.params.id);
     })
 }
 
@@ -34,7 +34,7 @@ module.exports.updatePatient = async (req , res)=>{
 
     patientModel.findByIdAndUpdate(condition , req.body, (err ,docs)=>{
         if (!err) res.json({patient : "update successful",update: docs});
-        else return res.status(404).send(req.params.id);
+        else return res.status(400).send(req.params.id);
     })
 }
 
@@ -44,6 +44,6 @@ module.exports.supPatient = async (req,res)=>{
 
     patientModel.findByIdAndRemove(condition , req.body, (err ,docs)=>{
         if (!err) res.json({patient : "delete successful", delete : condition});
-        else return res.status(404).send(req.params.id);
+        else return res.status(400).send(req.params.id);
     })
 }
