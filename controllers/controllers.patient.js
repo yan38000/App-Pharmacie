@@ -13,7 +13,7 @@ module.exports.addPatient = async (req, res)=>{
     const {nom,prenom} = req.body
     try{
         const patient = await patientModel.create({nom , prenom});
-        res.status(201).json({patient : patient._id});
+        res.status(201).json({patient : "add successful"});
     }
     catch(err){
         res.status(200).send({err});
@@ -33,7 +33,7 @@ module.exports.updatePatient = async (req , res)=>{
     const condition = { _id : req.params.id};
 
     patientModel.findByIdAndUpdate(condition , req.body, (err ,docs)=>{
-        if (!err) res.send('mofifi yes'+docs);
+        if (!err) res.json({patient : "update successful",update: docs});
         else return res.status(404).send(req.params.id);
     })
 }
@@ -43,7 +43,7 @@ module.exports.supPatient = async (req,res)=>{
     const condition = { _id : req.params.id};
 
     patientModel.findByIdAndRemove(condition , req.body, (err ,docs)=>{
-        if (!err) res.json({docs : patient});
+        if (!err) res.json({patient : "delete successful", delete : condition});
         else return res.status(404).send(req.params.id);
     })
 }
