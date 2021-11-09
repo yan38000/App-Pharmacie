@@ -1,6 +1,10 @@
 'use strict';
+// Librairie de constantes strings pour formattage de texte console
 
 module.exports = {
+
+    // /!\ RESET applique uniquement le foreground /!\
+    // Ces effets compte comme foreground
     RESET : "\x1b[0m",
     BOLD : "\x1b[1m",
     DIM : "\x1b[2m",
@@ -9,6 +13,7 @@ module.exports = {
     REVERSE : "\x1b[7m",
     HIDDEN : "\x1b[8m",
 
+    // ForeGround - Couleurs du texte
     FG_BLACK : "\x1b[30m",
     FG_RED : "\x1b[31m",
     FG_GREEN : "\x1b[32m",
@@ -20,6 +25,7 @@ module.exports = {
     FG_LIGHTGRAY : "\x1b[37m",
     FG_DARKGRAY : "\x1b[90m",
 
+    // BackGround - Couleurs du fond
     BG_BLACK : "\x1b[40m",
     BG_RED : "\x1b[41m",
     BG_GREEN : "\x1b[42m",
