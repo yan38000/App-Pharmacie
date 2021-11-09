@@ -14,7 +14,7 @@ const patientSchema = mongoose.Schema({
     trim : true
 }
 
-})
+});
 
 const patientModel = mongoose.model('patient' ,patientSchema);
 

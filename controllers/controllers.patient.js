@@ -2,13 +2,13 @@ const ObjectID = require('mongoose').Types.ObjectId;
 const patientModel = require('../models/models.patient');
 
 
-//affiche patient
+// Afficher patient
 module.exports.allPatient = async (req, res)=>{
     const patient = await patientModel.find().select();
     res.status(200).json(patient);
 }
 
-//ajout patient
+// Ajouter patient
 module.exports.addPatient = async (req, res)=>{
     const {nom,prenom} = req.body
     try{
@@ -20,7 +20,7 @@ module.exports.addPatient = async (req, res)=>{
     }
 }
 
-//affiche id patient
+// Afficher id patient
 module.exports.infoPatient = async (req,res)=>{
     patientModel.findById(req.params.id , (err , docs)=>{
         if (!err) res.send(docs);
@@ -28,7 +28,7 @@ module.exports.infoPatient = async (req,res)=>{
     })
 }
 
-//modifie patient
+// Modifier patient
 module.exports.updatePatient = async (req , res)=>{
     const condition = { _id : req.params.id};
 
@@ -38,7 +38,7 @@ module.exports.updatePatient = async (req , res)=>{
     })
 }
 
-//supprime patient
+// Supprimer patient
 module.exports.supPatient = async (req,res)=>{
     const condition = { _id : req.params.id};
 
