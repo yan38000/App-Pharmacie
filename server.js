@@ -2,10 +2,11 @@
 const express = require('express');
 const cors = require('cors');
 
-const color = require('./config/strcolors');
+
 
 // require path
 const app = express();
+const color = require('./config/strcolors');
 const patientRouter = require('./routes/route.patient');
 require('dotenv').config({path : './config/.env'});
 
@@ -26,5 +27,5 @@ app.use((req,res)=>{
 
 // Serveur écoute
 app.listen(process.env.PORT, ()=>{
-    console.log(color.STATSUS_OK + `Server listening at port ${process.env.PORT}`);
+    console.log(color.STATUS_OK + `Server listening at port ${process.env.PORT}`);
 });
