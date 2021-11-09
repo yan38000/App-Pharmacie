@@ -8,6 +8,7 @@ const cors = require('cors');
 const app = express();
 const color = require('./config/strcolors');
 const patientRouter = require('./routes/route.patient');
+const medecinRouter = require('./routes/route.medecin');
 require('dotenv').config({path : './config/.env'});
 
 require('./config/db');
@@ -19,6 +20,7 @@ app.use(cors());
 
 // Gestion routeur "patient"
 app.use('/api/patient', patientRouter);
+app.use('/api/medecin/', medecinRouter);
 
 // 400 Erreur : pas de route
 app.use((req,res)=>{
