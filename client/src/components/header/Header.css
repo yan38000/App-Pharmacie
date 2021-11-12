@@ -1,0 +1,49 @@
+@import url("../../Asset/fonts/fonts.css");
+
+.h-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 2%;
+    
+    
+}
+
+.h-notif{
+    height: 5vh;
+    width: 5vh;
+    background-color: red;
+}
+li{
+    
+    display: inline-block;
+    margin-right: 40px;
+    color: #D0D1D2;
+    font-size: 1em;
+    font-family: "poppins semi";
+}  
+
+/*shearch*/
+.h-shearch{
+    height: 40px;
+    width: 300px;
+    border: none;
+    background-color: #F1F3F5;
+    border-radius: 15px;
+    padding-left: 20px;
+}
+.h-shearch-icon{
+    height: 30px;
+    width: 30px;
+    color : #594999;
+    font-weight: bold;
+    position: relative;
+    left: 8vw;
+    
+}
+.h-notif{
+    height: 40px;
+    width: 40px;
+    border-radius: 15px;
+    background-color: #F1F3F5;
+}

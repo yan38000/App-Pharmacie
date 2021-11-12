@@ -3,20 +3,31 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Header from './components/header/Header'
 
 ReactDOM.render(
   <React.StrictMode>
-    <div className="structure">
-      <div className="s-space">
-          <div className="s-left"></div>
-            <div className="s-center">
-              <div className="s-header"></div>
-              <div className="s-conteiner"></div>
-            </div>
-          <div className="s-right"></div>
+      <div className="s-all">
+        <div className="s-left">
+          <div className="s-left-top"></div>
+          <div className="s-left-bottom"></div>
+        </div>
+
+        <div className="s-center">
+          <div className="s-header">
+            <Header/>
+          </div>
+          <div className="s-conteiner">
+            <App />
+          </div>
+        </div>
+
+        <div className="s-right">
+          <div className="s-right-top"></div>
+          <div className="s-right-bottom"></div>
+        </div>
       </div>
-    </div>
-    <App />
+    
   </React.StrictMode>,
   document.getElementById('root')
 );
