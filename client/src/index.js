@@ -6,6 +6,16 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
+    <div className="structure">
+      <div className="s-space">
+          <div className="s-left"></div>
+            <div className="s-center">
+              <div className="s-header"></div>
+              <div className="s-conteiner"></div>
+            </div>
+          <div className="s-right"></div>
+      </div>
+    </div>
     <App />
   </React.StrictMode>,
   document.getElementById('root')
