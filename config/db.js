@@ -7,4 +7,4 @@ mongoose.connect("mongodb+srv://"+process.env.DB_IDT_PASS+"@cluster0.sqive.mongo
 }
 )
 .then(()=> console.log(color.STATUS_OK + 'connected to mongoDB'))
-.catch((err)=> console.log(color.STATUS_ERR + 'Failed to connected', err));
+.catch((err)=> console.log(color.STATUS_ERR + 'Failed to connect', err));
