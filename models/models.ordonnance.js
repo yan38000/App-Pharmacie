@@ -7,6 +7,11 @@ const ordonnanceSchema = mongoose.Schema({
         type: Number,
         require: true
     },
+    medecin: {
+        // Se réfere a medecin.ref - Numéro unique du medecin originaire de l'ordonnance
+        type: Number,
+        require: true
+    },
     date: {
         // Date de création de l'ordonnance de la part du medecin
         type: Date,

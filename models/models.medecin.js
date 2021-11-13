@@ -1,7 +1,12 @@
 const mongoose = require('mongoose');
 
 const medecinShema = mongoose.Schema({
-    
+
+    ref: {
+        // Numéro unique désignant le medecin
+        type: Number,
+        require: true  
+    },
     nom: {
         type: String,
         require : true,
@@ -18,4 +23,3 @@ const medecinShema = mongoose.Schema({
 const medecinModel = mongoose.model('medecin' , medecinShema);
 
 module.exports = medecinModel;
-
