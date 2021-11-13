@@ -4,9 +4,13 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Header from './components/header/Header'
+import { BrowserRouter as Router, Route } from "react-router-dom";
+
+
 
 ReactDOM.render(
   <React.StrictMode>
+    
       <div className="s-all">
         <div className="s-left">
           <div className="s-left-top"></div>
@@ -15,7 +19,10 @@ ReactDOM.render(
 
         <div className="s-center">
           <div className="s-header">
+            
             <Header/>
+           
+            
           </div>
           <div className="s-conteiner">
             <App />
