@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import Header from './components/header/Header'
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import AddPatient from './views/Patient/AddPatient';
+import Patient from './views/Patient/Patient'
 
 
 
@@ -27,6 +28,7 @@ ReactDOM.render(
           </div>
           <div className="s-conteiner">
             <AddPatient />
+            <Patient />
           </div>
         </div>
 
