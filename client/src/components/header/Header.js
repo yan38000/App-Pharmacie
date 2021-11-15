@@ -2,7 +2,7 @@ import React from "react";
 import './Header.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import  {faSearch ,faBell} from '@fortawesome/free-solid-svg-icons'
-import { NavLink, Link } from "react-router-dom";
+
 
 function Header() {
   return (
