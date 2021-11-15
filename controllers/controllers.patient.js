@@ -21,7 +21,7 @@ module.exports.addPatient = async (req, res)=>{
             'message': "Une date de naissance doit etre précisée"
         });
     }
-    if (!req?.body?.nom || !req?.body?.nom) {
+    if (!req?.body?.nom || !req?.body?.prenom) {
         return res.status(400).json({
             'message': "Un nom et prénom doivent etre précisés"
         });

@@ -20,7 +20,7 @@ const patientSchema = mongoose.Schema({
     },
     mutuelle: {
         // Se réfere a mutuelle.ref - Désigne mutuelle concernée
-        type: Number,
+        type: String,
         require: true
     },
     dateNaiss: {
@@ -29,6 +29,6 @@ const patientSchema = mongoose.Schema({
     }
 });
 
-const patientModel = mongoose.model('patient' ,patientSchema);
+const patientModel = mongoose.model('patient', patientSchema);
 
 module.exports = patientModel;

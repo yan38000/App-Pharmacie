@@ -5,7 +5,7 @@ const patientSchema = mongoose.Schema({
     ref: {
         // Référence de la mutuelle unique
         // (arbitrairement attribué)
-        type: Number,
+        type: String,
         require : true,
         unique : true
     },
@@ -15,6 +15,6 @@ const patientSchema = mongoose.Schema({
     }
 });
 
-const patientModel = mongoose.model('patient' ,patientSchema);
+const mutuelleModel = mongoose.model('mutuelle', patientSchema);
 
-module.exports = patientModel;
+module.exports = mutuelleModel;
