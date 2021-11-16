@@ -1,4 +1,6 @@
-const ObjectID = require('mongoose').Types.ObjectId;
+/*
+Fonctions de la route medecin
+*/
 const medecinModel = require('../models/models.medecin');
 
 

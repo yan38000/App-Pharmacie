@@ -1,6 +1,9 @@
+/*
+Fonctions de la route medicament
+*/
 const medicamentModel = require('../models/models.medicament');
 
-// Afficher tous les médicaments et leurs stocks
+// Afficher tous les médicaments et leur stock
 module.exports.allmedicament = async (req, res) => {
     const medicament = await medicamentModel.find().select();
     res.status(200).json(medicament);
@@ -93,7 +96,7 @@ module.exports.supMedicament = async (req, res) => {
         });
     }
 
-    const result = await medicament.deleteOne({ ref: req.params.id })
+    const result = await medicament.deleteOne({ ref: req.params.id });
     res.status(200).json(result);
 }
 
