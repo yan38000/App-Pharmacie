@@ -40,6 +40,7 @@ module.exports.addPatient = async (req, res)=>{
     }
     catch(err){
         console.error(err);
+        res.status(500).send(err);
     }
 }
 

@@ -5,6 +5,7 @@ const medecinShema = mongoose.Schema({
     ref: {
         // Numéro unique désignant le medecin
         type: Number,
+        unique: true,
         require: true  
     },
     nom: {
