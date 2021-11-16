@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Header from './components/header/Header'
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link} from "react-router-dom";
 import AddPatient from './views/Patient/AddPatient';
 import Patient from './views/Patient/Patient'
 
@@ -22,13 +22,17 @@ ReactDOM.render(
         <div className="s-center">
           <div className="s-header">
             
-            <Header/>
-           
+           <Header />
             
           </div>
           <div className="s-conteiner">
-            <AddPatient />
-            <Patient />
+            <BrowserRouter>
+              <Routes>
+                <Route path="/" element={<App />} />
+                <Route path="/patients" element={<Patient />} />
+                <Route path="/addPatients" element={<AddPatient />} />
+              </Routes>
+            </BrowserRouter>
           </div>
         </div>
 

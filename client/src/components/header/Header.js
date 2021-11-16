@@ -5,12 +5,18 @@ import  {faSearch ,faBell} from '@fortawesome/free-solid-svg-icons'
 
 
 function Header() {
+  
   return (
     <div className="h-menu">
       <nav>
         
-        <li>Accueil</li>
-        <li>Patients</li>
+        
+            
+                
+              
+    
+       
+        
         <li>Ordonnances</li>
         <li>Médecins</li>
         <li>Médicaments</li>
