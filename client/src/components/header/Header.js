@@ -2,6 +2,7 @@ import React from "react";
 import './Header.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import  {faSearch ,faBell} from '@fortawesome/free-solid-svg-icons'
+import {Link} from 'react-router-dom'
 
 
 function Header() {
@@ -10,16 +11,15 @@ function Header() {
     <div className="h-menu">
       <nav>
         
-        
-            
-                
-              
+        <Link to="/"><li>Accueil</li></Link>
+        <Link to="/patients"><li>Patients</li></Link>  
+        <Link to="/ordonnances"><li>Ordonnances</li></Link>     
+        <Link to="/medecins"><li>Médecins</li></Link>
+        <Link to="/medicaments"><li>Médicaments</li></Link>
     
        
         
-        <li>Ordonnances</li>
-        <li>Médecins</li>
-        <li>Médicaments</li>
+       
       </nav>
       <div className="h-shearch-conteiner">
       <FontAwesomeIcon icon={faSearch}  className="h-shearch-icon"/>

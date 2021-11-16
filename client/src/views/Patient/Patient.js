@@ -4,6 +4,7 @@ import Axios from 'axios'
 
 export default function Patient() {
    const [patient , setPatient] = useState([]);
+ 
 
    useEffect(()=>{
        Axios.get('http://localhost:5000/api/patient/allPatient').then(res =>{
@@ -13,7 +14,14 @@ export default function Patient() {
        .catch(err=>{
            console.log(err)
        })
-   })
+
+       
+       
+   }, [])
+    
+    
+    
+        
 
    const navigate = useNavigate()
     return (
@@ -21,9 +29,13 @@ export default function Patient() {
         <div>
             <button onClick={()=> navigate("/addPatients")}>create</button>
             {patient.map(patients=>(
-                <h1 key={patients._id}>{patients.nom} {patients.prenom}</h1>
+                <div>
+                    <h4 key="_id">{patients.nom}</h4>
+                    
+                </div>
+                
             ))}
-            aaaa
+            
         </div>
     )
 }
