@@ -21,6 +21,7 @@ export default function AddPatient() {
             dateNaiss : data.dateNaiss
         })
         .then(res=>{
+            alert("add success")
             console.log(res.data)
         })
     }
