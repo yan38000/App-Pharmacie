@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import Axios from 'axios'
+import './AddPatient.css'
 
 export default function AddPatient() {
     const url ="http://localhost:5000/api/patient/addPatient";
@@ -33,15 +34,27 @@ export default function AddPatient() {
     }
     return (
         <div>
-            addPatient
-            <form onSubmit={(e)=> submit(e)}>
-                <input  onChange={(e)=>{handel(e)}} id="numSecu" value={data.numSecu} placeholder="secu" type="number"></input>
-                <input  onChange={(e)=>{handel(e)}} id="nom" value={data.nom} placeholder="nom" type="text"></input>
-                <input  onChange={(e)=>{handel(e)}} id="prenom" value={data.prenom} placeholder="prenom" type="text"></input>
-                <input  onChange={(e)=>{handel(e)}} id="mutuelle" value={data.mutuelle} placeholder="mutuelle" type="text"></input>
-                <input  onChange={(e)=>{handel(e)}} id="dateNaiss" value={data.dateNaiss} placeholder="date" type="date"></input>
+            <div className="add-title">Inscription nouveau patient</div>
+            <form onSubmit={(e)=> submit(e)} className="add-form">
+                    <div className="add-Name">
+                        <input  onChange={(e)=>{handel(e)}} className="add-input" id="prenom" value={data.prenom} placeholder="Votre Prénom" type="text"></input>
+                        <input  onChange={(e)=>{handel(e)}} className="add-input" id="nom" value={data.nom} placeholder="Votre Nom" type="text"></input>
+                    </div>
                 
-                <button>submit</button>
+                        <input  onChange={(e)=>{handel(e)}} className="add-input2" id="dateNaiss" value={data.dateNaiss} placeholder="Date de naissance" type="date"></input>
+                    
+                        <input  onChange={(e)=>{handel(e)}} className="add-input2" id="mutuelle" value={data.mutuelle} placeholder="Votre numéro de mutuelle" type="text"></input>
+                        <input  onChange={(e)=>{handel(e)}} className="add-input2" id="numSecu" value={data.numSecu} placeholder="Votre numéro de sécurité social" type="number"></input>
+                        
+                    
+                    <div>
+                    <button className="add-button">Enregistrer</button>
+                    </div>
+                
+                
+                
+                
+                
             </form>
         </div>
     )

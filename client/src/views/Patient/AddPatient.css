@@ -1,0 +1,60 @@
+@import url("../../Asset/fonts/fonts.css");
+
+.add-title{
+    font-family: "poppins semi";
+    color: #11263C;
+    font-size: 24px;
+}
+.add-form {
+    margin : 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.add-Name{
+    display: flex;
+    flex-direction: row;
+    
+    
+}
+
+.add-input{
+    /*margin-top: 20px;*/
+    margin: 10px;
+    border-radius: 6px;
+    border : solid 2 px #D9D9D9;
+    width: 200px;
+    height: 48px;
+}
+.add-input:active{
+    border-color: orange;
+}
+.add-input2{
+    margin: 10px;
+    border-radius: 6px;
+    border : solid 2 px #D9D9D9;
+    width: 428px;
+    height: 48px;
+}
+.add-num{
+    display: flex;
+    flex-direction: column;
+}
+.add-button{
+    margin-left: 10px;
+    border-radius: 6px;
+    border: none;
+    background-color: #8276B4;
+    width: 435px;
+    height: 48px;
+    color : #fff;
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media screen and (max-width:1200px) {
+    .add-form{
+        margin-left: auto;
+        margin-right: auto ;
+    }
+}
