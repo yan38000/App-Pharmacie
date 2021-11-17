@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import {useNavigate} from 'react-router-dom'
 import Axios from 'axios'
+import ButtonPatientsItem from '../../components/patientItem/ButtonPatientsItem'
 
 export default function Patient() {
    const [patient , setPatient] = useState([]);
@@ -20,18 +21,19 @@ export default function Patient() {
    }, [])
     
     
-    
+   
+
         
 
    const navigate = useNavigate()
     return (
         
         <div>
-            <button onClick={()=> navigate("/addPatients")}>create</button>
+            <ButtonPatientsItem />
             {patient.map(patients=>(
                 <div>
                     <h4 key="_id">{patients.nom}</h4>
-                    
+                   
                 </div>
                 
             ))}
