@@ -10,40 +10,34 @@ module.exports.allmedicament = async (req, res) => {
 }
 
 // Ajouter medicament
-/*
-module.exports.addPatient = async (req, res)=>{
+
+module.exports.addMedicament = async (req, res)=>{
     // Error handling - Parametres manquants
-    if (!req?.body?.numSecu) {
+    if (!req?.body?.ref) {
         return res.status(400).json({
-            'message': "Un numéro de sécurité sociale doit etre fourni"
+            'message': "une référence doit etre fournise"
         });
     }
-    if (!req?.body?.dateNaiss) {
+    if (!req?.body?.nom) {
         return res.status(400).json({
-            'message': "Une date de naissance doit etre précisée"
+            'message': "Un nom de médicament doit etre fourni"
         });
     }
-    if (!req?.body?.nom || !req?.body?.nom) {
+    if (!req?.body?.qte) {
         return res.status(400).json({
-            'message': "Un nom et prénom doivent etre précisés"
+            'message': "Une quantité de stock doit etre présicée"
         });
     }
-    if (!req?.body?.mutuelle) {
-        return res.status(400).json({
-            'message': "Une référence de mutuelle doit etre précisée"
-        });
-    }
-    const {numSecu, nom, prenom, mutuelle, dateNaiss} = req.body;
+    const {ref, nom, qte} = req.body;
 
     try{
-        const result = await patientModel.create({numSecu, nom, prenom, mutuelle, dateNaiss});
+        const result = await medicamentModel.create({ref, nom, qte});
         res.status(201).json({result});
     }
     catch(err){
         console.error(err);
     }
 }
-*/
 
 // Afficher Données d'un médicament
 module.exports.getMedicament = async (req, res) => {
