@@ -1,4 +1,6 @@
-const ObjectID = require('mongoose').Types.ObjectId;
+/*
+Fonctions de la route patient
+*/
 const patientModel = require('../models/models.patient');
 
 
@@ -36,10 +38,14 @@ module.exports.addPatient = async (req, res)=>{
 
     try{
         const result = await patientModel.create({numSecu, nom, prenom, mutuelle, dateNaiss});
-        res.status(201).json({result});
+        res.status(201).json({
+            'message': "Ajout du patient réussi",
+            result
+        });
     }
     catch(err){
         console.error(err);
+        res.status(500).send(err);
     }
 }
 

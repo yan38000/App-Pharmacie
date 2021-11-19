@@ -23,11 +23,11 @@ app.use('/api/patient', patientRouter);
 app.use('/api/medecin/', medecinRouter);
 
 // 400 Erreur : pas de route
-app.use((req,res)=>{
+app.use((req, res) => {
     res.status(400).send('error no route');
 })
 
 // Serveur écoute
-app.listen(process.env.PORT, ()=>{
+app.listen(process.env.PORT, () => {
     console.log(color.STATUS_OK + `Server listening at port ${process.env.PORT}`);
 });
