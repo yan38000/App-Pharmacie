@@ -12,6 +12,7 @@ import Ordo from './views/Ordo/Ordo';
 import Medic from './views/Medic/Medic';
 import Med from './views/Med/Med'
 import AddPatient from './views/Patient/AddPatient'
+import AddOrdo from './views/Ordo/addOrdo'
 
 ReactDOM.render(
   <React.StrictMode>
@@ -35,6 +36,7 @@ ReactDOM.render(
                 <Route path="/medecins" element={<Med/>}/>
                 <Route path="/medicaments" element={<Medic/>}/>
                 <Route path="/addPatients" element={<AddPatient/>}/>
+                <Route path="/addOrdonnance" element={<AddOrdo />}/>
               </Routes>
             </div>
 

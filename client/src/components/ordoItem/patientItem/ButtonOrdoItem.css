@@ -1,0 +1,22 @@
+@import url("../../Asset/fonts/fonts.css");
+
+.c-button{
+    display: flex;
+    justify-content: flex-end;
+}
+.button{
+    background-color: #594999;
+    width: 150px;
+    height: 40px;
+    color: #fff;
+    font-size: 14px;
+    font-family: "poppins semi";
+    border : none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+.icon-button{
+    height: 12.5;
+    
+}
