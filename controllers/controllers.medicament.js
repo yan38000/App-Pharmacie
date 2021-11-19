@@ -1,7 +1,7 @@
 /*
 Fonctions de la route medicament
 */
-const medicamentModel = require('../models/models.medicament');
+const medicamentModel = require('../models/Medicament');
 
 // Afficher tous les médicaments et leur stock
 module.exports.allmedicament = async (req, res) => {

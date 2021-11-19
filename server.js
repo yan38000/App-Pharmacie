@@ -1,26 +1,26 @@
 // Dépendances
 const express = require('express');
+const app = express();
 const cors = require('cors');
 
-
+const color = require('./config/strcolors');
+require('./config/db');
 
 // require path
-const app = express();
-const color = require('./config/strcolors');
-const patientRouter = require('./routes/route.patient');
-const medecinRouter = require('./routes/route.medecin');
-const ordonnanceRouter = require('./routes/route.ordonnance');
-const medicamentRouter = require('./routes/route.medicament');
 require('dotenv').config({path : './config/.env'});
-
-require('./config/db');
 
 // Initialisations middlewares
 app.use(express.json());
 app.use(express.urlencoded({extended : true}));
 app.use(cors());
 
-// Gestion routeur "patient"
+// Gestion des routeurs
+
+const patientRouter = require('./routes/route.patient');
+const medecinRouter = require('./routes/route.medecin');
+const ordonnanceRouter = require('./routes/route.ordonnance');
+const medicamentRouter = require('./routes/route.medicament');
+
 app.use('/api/patient/', patientRouter);
 app.use('/api/medecin/', medecinRouter);
 app.use('/api/ordonnance/', ordonnanceRouter);

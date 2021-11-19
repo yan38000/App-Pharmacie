@@ -1,7 +1,7 @@
 /*
 Fonctions de la route patient
 */
-const patientModel = require('../models/models.patient');
+const patientModel = require('../models/Patient');
 
 
 // Afficher patient
