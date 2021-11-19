@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import Axios from 'axios'
 import './AddPatient.css'
-
+import ButtonReturnItem from '../../components/patientItem/ButtonReturnItem'
 export default function AddPatient() {
     const url ="http://localhost:5000/api/patient/addPatient";
     const [data , setDate] = useState({
@@ -22,8 +22,10 @@ export default function AddPatient() {
             dateNaiss : data.dateNaiss
         })
         .then(res=>{
-            alert("add success")
+            alert("Le patient a été crée")
             console.log(res.data)
+            window.location.replace("http://localhost:3000/patients")
+            
         })
     }
     function handel(e){
@@ -49,6 +51,7 @@ export default function AddPatient() {
                     
                     <div>
                     <button className="add-button">Enregistrer</button>
+                    <ButtonReturnItem />
                     </div>
                 
                 

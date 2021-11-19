@@ -17,49 +17,33 @@ import AddOrdo from './views/Ordo/addOrdo'
 ReactDOM.render(
   <React.StrictMode>
     <div className="s-all">
-        <div className="s-left">
-          <div className="s-left-top"></div>
+      <div className="s-left">
+        <div className="s-left-top"></div>
           <div className="s-left-bottom"></div>
-        </div>
-        
+      </div>
         <Router>
           <div className="s-center">
             <div className="s-header">
               <Header/>
             </div>
-          
-            <div className="s-conteiner">
-              <Routes>
-                <Route path="/" element={<App/>}/>
-                <Route path="/patients" element={<Patient/>}/>
-                <Route path="/ordonnances" element={<Ordo/>}/>
-                <Route path="/medecins" element={<Med/>}/>
-                <Route path="/medicaments" element={<Medic/>}/>
-                <Route path="/addPatients" element={<AddPatient/>}/>
-                <Route path="/addOrdonnance" element={<AddOrdo />}/>
-              </Routes>
-            </div>
-
-         
-          
-          
-          
-          
-          
-         
-
-
-
+              <div className="s-conteiner">
+                <Routes>
+                  <Route path="/" element={<App/>}/>
+                  <Route path="/patients" element={<Patient/>}/>
+                  <Route path="/ordonnances" element={<Ordo/>}/>
+                  <Route path="/medecins" element={<Med/>}/>
+                  <Route path="/medicaments" element={<Medic/>}/>
+                  <Route path="/addPatients" element={<AddPatient/>}/>
+                  <Route path="/addOrdonnance" element={<AddOrdo />}/>
+                </Routes>
+              </div>
           </div>
-        </Router>
-
-        
-
-        <div className="s-right">
-          <div className="s-right-top"></div>
-          <div className="s-right-bottom"></div>
-        </div>
-      </div>
+                </Router>
+                  <div className="s-right">
+                    <div className="s-right-top"></div>
+                      <div className="s-right-bottom"></div>
+                  </div>
+    </div>
       
     
   </React.StrictMode>,

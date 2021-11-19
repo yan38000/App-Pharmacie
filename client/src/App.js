@@ -1,10 +1,9 @@
 import './App.css';
-
+import Accueil from './views/Accueil/Accueil'
 function App() {
   return (
     <div className="App">
-      Acueil
-      
+     aaa
     </div>
   );
 }
