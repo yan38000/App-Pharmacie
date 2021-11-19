@@ -3,7 +3,7 @@ Fonctions de la route medecin
 */
 const medecinModel = require('../models/Medecin');
 
-
+// Permet d'ajouter un medecin a la base
 module.exports.addMedecin = async (req, res) => {
     if (!req?.body?.ref) {
         return res.status(400).json({
@@ -34,11 +34,13 @@ module.exports.addMedecin = async (req, res) => {
     }
 }
 
+// Renvoie tous les medecins de la base de donnée
 module.exports.AllMedecin = async(req ,res) => {
     const medecin = await medecinModel.find().select();
     res.status(200).json(medecin);
 }
 
+// Renvoie un medecin a partir de sa référence
 module.exports.getMedecin = async (req, res) => {
     if (!req?.params?.id) {
         return res.status(400).json({

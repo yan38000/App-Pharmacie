@@ -1,5 +1,7 @@
 'use strict';
-// Librairie de constantes strings pour formattage de texte console
+/*
+Librairie de constantes strings pour formattage de texte console
+*/
 
 module.exports = {
 
