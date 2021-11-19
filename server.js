@@ -9,6 +9,7 @@ const app = express();
 const color = require('./config/strcolors');
 const patientRouter = require('./routes/route.patient');
 const medecinRouter = require('./routes/route.medecin');
+const ordonnanceRouter = require('./routes/route.ordonnance');
 require('dotenv').config({path : './config/.env'});
 
 require('./config/db');
@@ -19,8 +20,9 @@ app.use(express.urlencoded({extended : true}));
 app.use(cors());
 
 // Gestion routeur "patient"
-app.use('/api/patient', patientRouter);
+app.use('/api/patient/', patientRouter);
 app.use('/api/medecin/', medecinRouter);
+app.use('/api/ordonnance/', ordonnanceRouter)
 
 // 400 Erreur : pas de route
 app.use((req, res) => {

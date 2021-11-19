@@ -20,6 +20,6 @@ const medecinShema = mongoose.Schema({
     }
 });
 
-const medecinModel = mongoose.model('medecin' , medecinShema);
+const medecinModel = mongoose.model('medecin', medecinShema);
 
 module.exports = medecinModel;

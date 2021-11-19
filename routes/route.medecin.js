@@ -3,7 +3,7 @@ const controllersMedecin = require('../controllers/controllers.medecin');
 
 router.post('/addMedecin', controllersMedecin.addMedecin);
 router.get('/allMedecin', controllersMedecin.AllMedecin);
-router.get('/:id', controllersMedecin.infoMedecin);
+router.get('/:id', controllersMedecin.getMedecin);
 
 
 module.exports = router;
