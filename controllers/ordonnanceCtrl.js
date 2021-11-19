@@ -2,7 +2,7 @@
 Fonctions de la route ordonnance
 */
 const ObjectID = require('mongoose').Types.ObjectId;
-const ordonnanceModel = require('../models/models.ordonnance');
+const ordonnanceModel = require('../models/Ordonnance');
 
 
 // Afficher toutes les ordonnances

@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const controllerMedicament = require('../controllers/controllers.medicament');
+const controllerMedicament = require('../controllers/medicamentCtrl');
 
 
 router.post('/add', controllerMedicament.addMedicament);

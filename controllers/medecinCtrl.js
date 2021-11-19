@@ -1,7 +1,7 @@
 /*
 Fonctions de la route medecin
 */
-const medecinModel = require('../models/models.medecin');
+const medecinModel = require('../models/Medecin');
 
 
 module.exports.addMedecin = async (req, res) => {

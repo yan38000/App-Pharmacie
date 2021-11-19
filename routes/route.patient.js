@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const controllerPatient = require('../controllers/controllers.patient');
+const controllerPatient = require('../controllers/patientCtrl');
 
 
 router.post('/addPatient', controllerPatient.addPatient);
