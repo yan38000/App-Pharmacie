@@ -59,7 +59,6 @@ module.exports.getOrdonnance = async (req,res) => {
     return res.status(200).json({
         ordonnance
     });
-
 }
 
 // Modifier ordonnance
@@ -116,7 +115,7 @@ module.exports.supDetailOrdonnance = async (req,res) => {
         });
     }
 
-    ordonnance.updateOne({$pullAll: {refMed: [req.params.refMed] }});
+    ordonnance.updateOne({detail: [{$pullAll: {refMed: [req.params.refMed] } } ]});
     const result = await ordonnance.save();
 
     res.status(200).json({
