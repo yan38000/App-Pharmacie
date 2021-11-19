@@ -37,7 +37,7 @@ export default function Patient() {
                         <div className="card-s" key={medecins._id}>
                             <div className="card-left">
                                 <p className="card-title">{medecins.nom} {medecins.prenom}</p>
-                                
+                                <p className="card-subTitle">Référence : {medecins.ref}</p>
                             </div>
                     
                             

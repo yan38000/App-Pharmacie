@@ -47,6 +47,7 @@ export default function Patient() {
                             </div>
                     
                             <div className="card-right">
+                                
                                 <FontAwesomeIcon icon={faPlus}  className="icon-button-card"/>
                                 <FontAwesomeIcon icon={faEdit}  className="icon-button-card"/> 
                                 
